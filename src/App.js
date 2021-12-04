@@ -12,21 +12,21 @@ const App = () => {
       [
           {
               id: 1,
-              text: 'Appa Bday',
+              text: 'Start of 2022',
               day: 'Jan 1st',
               reminder: true,
           },
           {
               id: 2,
-              text: 'Kavi Bday',
+              text: 'Valentine\'s Day',
               day: 'Feb 14th',
               reminder: false,
           },
           {
               id: 3,
-              text: 'Amma Bday',
-              day: 'May 4th',
-              reminder: false,
+              text: 'Christmas',
+              day: 'Dec 25',
+              reminder: true,
           },
       ])
     const [showAddTask, setShowAddTask] = useState(false)
@@ -50,6 +50,7 @@ const App = () => {
     task.id === id ? {...task, reminder: !task.reminder}: task))
   }
   return (
+    // HTML div class, (we call it container so that we can style it in CSS)
     <div className='container'>
       <Header title='Task ~ Tracker' 
       onAdd={() => setShowAddTask(!showAddTask)}

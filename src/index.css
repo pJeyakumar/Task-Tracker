@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
-
+/* CSS styling, basically making things look nice*/
+/* if the block has a '.' before the name, that is the CSS styling for that class*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,6 +9,13 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color:mediumslateblue;
+}
+
+label {
+  color: aqua;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .container {
@@ -15,7 +23,7 @@ body {
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
+  border: 10px solid aqua;
   padding: 30px;
   border-radius: 5px;
 }
@@ -29,15 +37,17 @@ body {
 
 .btn {
   display: inline-block;
-  background: #000;
-  color: #fff;
+  background:darkorchid;
+  color:orange;
   border: none;
   padding: 10px 20px;
   margin: 20px;
+  border: 2px solid orange;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
   font-size: 15px;
+  font-weight: bold;
   font-family: inherit;
 }
 

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+// setting our inputs
 const AddTask = ({ onAdd }) => {
   const [text, setText] = useState('')
   const [day, setDay] = useState('')
@@ -8,19 +9,24 @@ const AddTask = ({ onAdd }) => {
   const onSubmit = (e) => {
     e.preventDefault()
 
+    // checking the text
     if (!text) {
       alert('Please add a task')
       return
     }
 
+    // adding a new task with the user's inputs
     onAdd({ text, day, reminder })
 
+    // resetting our input boxes and buttons
     setText('')
     setDay('')
     setReminder(false)
   }
 
   return (
+    // HTML to create the form in which the user will be able to input info for Task Name, Task Date and toggle a reminder for the Task
+    // The user will then press the submit button which will take all these inputs and create a new task
     <form className='add-form' onSubmit={onSubmit}>
       <div className='form-control'>
         <label>Task</label>

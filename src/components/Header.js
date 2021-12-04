@@ -7,8 +7,8 @@ const Header = ({title, onAdd, showAdd}) => {
     }
     return (
         <header className='header'>
-            <h1 style={headingStyle}>{title}</h1> 
-            <Button color={showAdd ? 'orange' : 'darkorchid'} text={showAdd ? 'Hide' : 'Add New Task'} onClick={onAdd}/>
+            <h1 style={headingStyle}>{title}</h1>
+            <Button className ='btn' text={showAdd ? 'Hide' : 'Add New Task'} onClick={onAdd}/> 
         </header>
     )
 }
@@ -23,7 +23,6 @@ Header.propTypes = {
     title: PropTypes.string,
 }
 
-// CSS styling is JS
 const headingStyle = {
     color: 'orange', 
 }
